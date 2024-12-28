@@ -1,19 +1,13 @@
 const express = require('express');
 const musicController = require('../controllers/musicController');
+const { verifyJWT } = require('../auth.middleware');
 
 const musicRouter = express.Router();
 
-//MÈTODOS GET
 musicRouter.get('/musics', musicController.index);
 musicRouter.get('/musics/:id', musicController.getById);
-
-//MÈTODOS POST
-musicRouter.post('/musics', musicController.save);
-
-//MÈTODOS PUT
-musicRouter.put('/musics/:id', musicController.update);
-
-//MÈTODOS DELETE
-musicRouter.delete('/musics/:id', musicController.delete);
+musicRouter.post('/musics', verifyJWT , musicController.save);
+musicRouter.put('/musics/:id', verifyJWT , musicController.update);
+musicRouter.delete('/musics/:id', verifyJWT, musicController.delete);
 
 module.exports = musicRouter;
