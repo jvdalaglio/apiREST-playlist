@@ -70,13 +70,5 @@
     "artist": "Eco Espiritual",
     "year": 2012,
     "createdAt": "22/12/2024"
-  },
-  {
-    "id": 11,
-    "title": "Só na trombetinha",
-    "album": "Só trombetada",
-    "artist": "Trombeta Nova",
-    "year": 1990,
-    "createdAt": "22/12/2024"
   }
 ]

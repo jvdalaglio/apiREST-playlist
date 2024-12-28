@@ -41,7 +41,7 @@ const musicModel = {
     musicsObject.splice(musicIndex, 1);
     fs.writeFileSync('public/data/musics.json', JSON.stringify(musicsObject, null, 2));
     return "Música excluída com sucesso";
-  }
+  },
 }
 
 module.exports = musicModel;
